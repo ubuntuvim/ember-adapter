@@ -1,0 +1,19 @@
+
+<form>
+    <Input @id="id" @type="hidden" @value={{model.id}} />
+  <div class="form-group">
+    <label for="title">标题</label>
+    <Input @id="title" @type="text" @value={{model.title}} placeholder="标题" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="tag">标签</label>
+    <Input @id="tag" @type="text" @value={{model.tag}} placeholder="标签" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="content">笔记内容</label>
+    <Textarea @value={{model.content}} @cols="80" @rows="6" class="form-control" />
+    </div>
+
+  <button type="button" class="btn btn-success" {{action 'saveNotebook'}}>修改</button>
+
+</form>

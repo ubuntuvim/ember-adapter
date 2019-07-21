@@ -15,6 +15,11 @@ module.exports = {
     browser: true
   },
   rules: {
+      "block-indentation": "off",
+      "indent": "off",
+      "semi": ["off", "always"],
+      "quotes": ["off", "double"],
+      "no-mixed-spaces-and-tabs": ["off", true] //混用tab和空格
   },
   overrides: [
     // node files

@@ -1,0 +1,28 @@
+<h1>测试</h1>
+
+<LinkTo @route="notes.add" class="btn btn-primary">新增</LinkTo>
+
+<hr>
+
+<ul>
+
+  {{#each model as |item|}}
+  	<li>
+
+        <LinkTo @route="notes.show" @model={{item}}>{{item.title}}</LinkTo>
+
+	==========
+	<span/><span/><span/><span/><span/><span/>
+
+    <LinkTo @route="notes.edit" @model={{item}} class="btn btn-info">编辑</LinkTo>
+
+    =================
+
+    <button type="button" class="btn btn-danger" {{action 'deleteNote' item.id}}>删除</button>
+
+	</li>
+  {{/each}}
+</ul>
+
+<hr>
+{{outlet}}
